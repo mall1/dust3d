@@ -1,4 +1,4 @@
-project(imgui_sfml_example_multiple_windows)
+project(dust3d-gui)
 add_executable(${PROJECT_NAME}
   main.cpp
   ${IMGUI_DEMO_SOURCES}
@@ -16,3 +16,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE sfml-main)
 
 find_package(ImGui-SFML CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE ImGui-SFML::ImGui-SFML)
+
+
+target_link_libraries(${PROJECT_NAME} PRIVATE dust3d)
+
+target_compile_definitions(${PROJECT_NAME} PRIVATE TEST_DS3_FILE="${CMAKE_CURRENT_SOURCE_DIR}/aaa.ds3")

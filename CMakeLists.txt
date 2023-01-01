@@ -35,7 +35,4 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/th
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/third_party/rapidxml-1.13)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/third_party)
 
-add_executable(dust3d-bin main.cc)
-target_link_libraries(dust3d-bin PRIVATE ${PROJECT_NAME})
-
 add_subdirectory(imgui_gui)
